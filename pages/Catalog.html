@@ -1,0 +1,41 @@
+<br />
+<br />
+<br />
+<hr />
+<div class="container">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+
+        <small>You Search for:<small><b>{{search}}</b></small></small>
+        <hr />
+        <div>
+            <div ng-repeat="entry in entries" ng-class-odd="'oddclass'" style="border-bottom:1px solid black;">
+                <h3>{{entry.title}}</h3>
+                <font color="red">Status: {{entry.compiler_status}}</font>
+                <br />
+                <font color="grey">Language: {{entry.language}}</font>
+                <p>
+                    <small>
+                        <font color="grey" style="border-right:2px solid black">Level: {{entry.metadata.level}}</font>
+                    </small>
+                    <small>
+                        <font color="grey" style="border-right:2px solid black">Rating: {{entry.metadata.rating}}</font>
+                    </small>
+                    <small>
+                        <font color="grey">Users Attempted: {{entry.metadata.users_attempted}}</font>
+                    </small>
+                </p>
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-2"></div>
+
+
+<style>
+    .oddclass {
+        background-color: lightyellow;
+    }
+</style>
